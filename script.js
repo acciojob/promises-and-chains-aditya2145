@@ -4,7 +4,7 @@ const form = document.getElementById('ageForm');
 form.addEventListener('submit', () => {
 	event.preventDefault();
 	const name = document.getElementById('name').value;
-	const age = document.getElementById('age').value;
+	let age = document.getElementById('age').value;
 	age = parseInt(age);
 
 	const agePromise = new Promise((resolve, reject) => {
