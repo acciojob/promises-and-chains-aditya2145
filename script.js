@@ -9,7 +9,7 @@ form.addEventListener('submit', () => {
 
 	const agePromise = new Promise((resolve, reject) => {
 		setTimeout(() => {
-			if(age > 18) {
+			if(age >= 18) {
 				resolve();
 			}
 			else{
@@ -19,9 +19,9 @@ form.addEventListener('submit', () => {
 	});
 
 	agePromise.then(() => {
-		alert(`Welcome, ${name}. You can vote.`)
+		window.alert(`Welcome, ${name}. You can vote.`)
 	})
 	.catch(() => {
-		alert(`Oh sorry ${name}. You aren't old enough.`)
+		window.alert(`Oh sorry ${name}. You aren't old enough.`)
 	})
 })
